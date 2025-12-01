@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ปุ่มวาป 2 ตำแหน่ง</title>
+    <style>
+        #btn1, #btn2 {
+            position: absolute;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #btn1 {
+            left: 100px;
+            top: 100px;
+            display: block;
+        }
+
+        #btn2 {
+            left: 500px;
+            top: 300px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<button id="btn1">จับฉันให้ได้สิ!</button>
+<button id="btn2">จับฉันให้ได้สิ!</button>
+
+<script>
+    const btn1 = document.getElementById("btn1");
+    const btn2 = document.getElementById("btn2");
+
+    btn1.addEventListener("mouseenter", () => {
+        btn1.style.display = "none";
+        btn2.style.display = "block";
+    });
+
+    btn2.addEventListener("mouseenter", () => {
+        btn2.style.display = "none";
+        btn1.style.display = "block";
+    });
+</script>
+
+</body>
+</html>
